@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<style type="text/css">
+body
+{
+   
+   background-color:lightgreen;
+   <! -- border:5px solid black;
+   margin : 50px 150px 50px 150px; -->
+}
+form {
+    margin:25px 15px 25px 25px;
+    
+}
+</style>
+</head>
+<body >
+<div>
+   
+   <center>
+   	<h1> Insurance Prediction System </h1>
+      <form action="{{url_for('predict')}}" method="post" >
+         Enter your age : <input type = "number" name = "age" required="" />
+         <br><br>
+         Enter your BMI : <input type = "number" name = "bmi" required="" />
+         <br><br>
+         Enter the no. of children : <input type="number" name ="children" required=""/><br><br>
+         Smoker : <input required="" type="radio" name="smoker" value =1>Yes
+         <input required=""  type="radio" name="smoker" value=0>No<br><br>
+         Gender : <input required="" type="radio" name="sex" value =1>Male
+         <input required="" type='radio' name='sex' value=0>Female<br><br>
+         <button type='submit'  class="btn btn-primary btn-block btn-large">Calculate</button>
+
+       
+      </form>
+
+      <br>{{output}}<br><br><br>
+      </center>
+   
+    
+    
+</div>
+
+</body>
+</html>
